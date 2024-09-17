@@ -1,0 +1,115 @@
+.footer-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 50px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+      list-style: none;
+       gap: 60px;
+       color: #252525;
+       font-size: 20px;
+}
+   .footer-links li{
+    cursor: pointer;
+      }
+ .aboutlink p{
+    display: flex;
+    flex-direction: column; 
+ padding-bottom: 10px;
+    text-align: left;
+     }
+ .companylink p{
+display: flex;
+flex-direction: column;
+ padding-bottom: 10px;
+ text-align: left;
+ }
+ .aboutlink hr{
+    width: 100px;
+ }
+ .companylink hr{
+    width: 100px;
+     }
+     .productlink hr{
+        width: 100px;
+     }
+     .contactlink hr{
+        width: 100px;
+     }
+     .contactlink p{
+     display: flex;
+flex-direction: column;
+ padding-bottom: 10px;
+ text-align: left;
+     }
+     @media(max-width:800px){
+      .footer-two{
+         padding: 50px 20px;
+      }
+       .footer-links{
+         gap: 10px;
+         font-size: 14px;
+       }
+       .aboutlink p{
+      padding-bottom: 8px;
+          }
+      .companylink p{
+         padding-bottom: 8px;
+      }
+      .aboutlink hr{
+         width: 80px;
+      }
+      .companylink hr{
+         width: 80px;
+          }
+          .productlink hr{
+             width: 80px;
+          }
+          .contactlink hr{
+             width: 80px;
+          }
+          .contactlink p{
+            padding-bottom: 8px;
+          }
+     }
+     @media(max-width:500px){
+      .footer-two{
+         padding: 30px 10px;
+      }
+       .footer-links{
+         gap: 10px;
+         font-size: 12px;
+       }
+       .aboutlink p{
+      padding-bottom: 6px;
+  
+      font-size: 8px;
+          }
+      .companylink p{
+         padding-bottom: 6px;
+         font-size: 8px;
+      
+      }
+      .aboutlink hr{
+         width: 60px;
+      }
+      .companylink hr{
+         width: 60px;
+          }
+          .productlink hr{
+             width: 60px;
+          }
+          .contactlink hr{
+             width: 50px;
+          }
+          .contactlink p{
+            padding-bottom: 6px;
+            font-size: 8px;
+              }
+     }
