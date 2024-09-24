@@ -1,4 +1,4 @@
-const port = 4000;
+const port = process.env.PORT|| 4000;
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
@@ -39,7 +39,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
   }
   res.json({
     success: '1',
-    image_url: `http://localhost:${port}/images/${req.file.filename}`
+    image_url: `https://mern-stack-e-commerce-project-2wab.onrender.com/images/${req.file.filename}`
   });
 });
 
