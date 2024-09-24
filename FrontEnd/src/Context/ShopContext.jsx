@@ -15,12 +15,12 @@ const ShopContextProvider = (props) => {
     const [cartitem,setCartitem] = useState(getDefaultCart);
 
     useEffect(()=> {
-      fetch('http://localhost:4000/allproducts')
+      fetch('https://mern-stack-e-commerce-project-2wab.onrender.com/allproducts')
       .then((response) => response.json())
       .then((data) => setAll_Products(data))
 
       if(localStorage.getItem('auth-token')){
-        fetch('http://localhost:4000/getcart',{
+        fetch('https://mern-stack-e-commerce-project-2wab.onrender.com/getcart',{
           method:'POST',
           headers:{
             Accept:'application/form-data',
@@ -37,7 +37,7 @@ const ShopContextProvider = (props) => {
        const addTocart = (itemId) =>{
          setCartitem((prev)=> ({...prev,[itemId]:prev[itemId]+1}));
          if(localStorage.getItem('auth-token')){
-          fetch('http://localhost:4000/addtocart', {
+          fetch('https://mern-stack-e-commerce-project-2wab.onrender.com/addtocart', {
             method: 'POST',
             headers: {
               Accept: 'application/form-data',
@@ -55,7 +55,7 @@ const ShopContextProvider = (props) => {
        const removeFromcart = (itemId) =>{
         setCartitem((prev)=> ({...prev,[itemId]:prev[itemId]-1}));
           if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('https://mern-stack-e-commerce-project-2wab.onrender.com/removefromcart',{
              method:'POST',
              headers:{
                Accept:'application/form-data',
